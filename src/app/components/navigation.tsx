@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Icons } from "../../components/ui/icons";
 import { AuthLoading, Authenticated, Unauthenticated } from "convex/react";
 import Loader from "./loader";
+import UseAvatar from "./avatar";
 
 const Navigation = () => {
   const navItems = [
@@ -44,7 +45,9 @@ const Navigation = () => {
               </Link>
             </Unauthenticated>
             <Authenticated>
-              <div className="h-15 w-15 rounded-full border border-zinc-200 bg-zinc-400">Yes</div>
+              <div className="h-15 w-15">
+                <UseAvatar url=""/>
+              </div>
             </Authenticated>
             <AuthLoading>
               <Loader className="text-zinc-200" />

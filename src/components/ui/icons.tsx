@@ -1,4 +1,14 @@
-import { type LucideProps, Users, DraftingCompass, Loader, Settings, Plus, BarChart, UserRound, X } from "lucide-react";
+import {
+  type LucideProps,
+  Users,
+  DraftingCompass,
+  Loader,
+  Settings,
+  Plus,
+  BarChart,
+  X,
+  User,
+} from "lucide-react";
 
 export const Icons = {
   users: Users,
@@ -6,7 +16,7 @@ export const Icons = {
   loader: Loader,
   settings: Settings,
   plus: Plus,
-  avatar: UserRound,
+  avatar: User,
   chart: BarChart,
   cancel: X,
   gitHub: (props: LucideProps) => (

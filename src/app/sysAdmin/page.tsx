@@ -20,56 +20,56 @@ import {
 } from "@/components/ui/table";
 import TopNav from "./components/topNav";
 import Image from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export default function SystemAdminDashboard() {
-  const businesses = useQuery(api.systemAdmin.sysAdmin.listBusinesses);
+  const organisations = useQuery(api.systemAdmin.sysAdmin.listBusinesses);
 
   return (
     <div className="w-full mx-auto">
       <TopNav text="System Admin"></TopNav>
       <Card>
         <CardHeader>
-          <CardTitle>Existing Businesses</CardTitle>
-          <CardDescription>List of all registered businesses</CardDescription>
+          <CardTitle>Existing Organisation</CardTitle>
+          <CardDescription>List of all registered organisation</CardDescription>
         </CardHeader>
         <CardContent>
-          {businesses ? (
+          {organisations ? (
             <Table>
-              <TableCaption>A list of all registered businesses</TableCaption>
+              <TableCaption>A list of all registered Organisation</TableCaption>
               <TableHeader>
                 <TableRow>
-                  <TableHead></TableHead>
-                  <TableHead>Business Id</TableHead>
+                  <TableHead className="text-transparent">Logo</TableHead>
+                  <TableHead>organisation Id</TableHead>
                   <TableHead>Name</TableHead>
                   <TableHead>Domain</TableHead>
                   <TableHead>Admin</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {businesses.bizzlist.map((business, i) => (
-                  <TableRow key={business._id}>
-                    <TableCell className="font-medium rounded-md h-10 w-10 bg-neutral-400">
-                      <Image src="" alt="" fill className="object-fill w-full h-full"/>
-                      {businesses.bizzOwners[i]?.url}
+                {organisations.bizzlist.map((organisation, i) => (
+                  <TableRow key={organisation._id} className="p-1">
+                    <TableCell className="h-6 w-6 relative overflow-hidden">
+                      {/* <Image src={organisations.bizzOwners[i]?.url as string} alt="" fill className="w-full rounded-sm p-1 h-full"/> */}
                     </TableCell>
                     <TableCell className="font-medium">
-                      {business._id}
+                      {organisation._id}
                     </TableCell>
                     <TableCell className="font-medium">
-                      {business.name}
+                      {organisation.name}
                     </TableCell>
                     <TableCell className="font-medium">
-                      {business.domain}
+                      {organisation.domain}
                     </TableCell>
                     <TableCell className="font-medium">
-                      {businesses.bizzOwners[i]?.mail}
+                      {organisations.bizzOwners[i]?.mail}
                     </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
             </Table>
           ) : (
-            <p className="text-sm text-center text-neutral-500 animate-pulse">Loading businesses...</p>
+            <p className="text-sm text-center text-neutral-500 animate-pulse">Loading organisation...</p>
           )}
         </CardContent>
       </Card>

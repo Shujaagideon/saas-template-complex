@@ -15,24 +15,25 @@ import type {
   FunctionReference,
 } from "convex/server";
 import type * as auth from "../auth.js";
-import type * as Businesses_businesses from "../Businesses/businesses.js";
-import type * as Businesses_businessInvitation from "../Businesses/businessInvitation.js";
-import type * as Businesses_helper from "../Businesses/helper.js";
-import type * as Businesses_sendbusinessInvitation from "../Businesses/sendbusinessInvitation.js";
-import type * as emails_Businessinvitation from "../emails/Businessinvitation.js";
-import type * as emails_BusinessUserInvitation from "../emails/BusinessUserInvitation.js";
+import type * as emails_Organisationinvitation from "../emails/Organisationinvitation.js";
+import type * as emails_OrgsUserInvitation from "../emails/OrgsUserInvitation.js";
 import type * as emails_VerificationCodeEmail from "../emails/VerificationCodeEmail.js";
+import type * as helper_helper from "../helper/helper.js";
 import type * as helper_index from "../helper/index.js";
+import type * as helper_sendMail from "../helper/sendMail.js";
 import type * as http from "../http.js";
+import type * as Organisation_organisationInvitation from "../Organisation/organisationInvitation.js";
+import type * as Organisation_organisations from "../Organisation/organisations.js";
+import type * as Organisation_OrganisationToUser from "../Organisation/OrganisationToUser.js";
+import type * as Organisation_sendOrganisationInvitation from "../Organisation/sendOrganisationInvitation.js";
 import type * as OTP_ResendOTP from "../OTP/ResendOTP.js";
 import type * as payment_payment_db from "../payment/payment_db.js";
 import type * as payment_paystack from "../payment/paystack.js";
 import type * as schemas_auth from "../schemas/auth.js";
-import type * as schemas_business from "../schemas/business.js";
+import type * as schemas_organisation from "../schemas/organisation.js";
 import type * as schemas_payments from "../schemas/payments.js";
 import type * as schemas_sysAdmin from "../schemas/sysAdmin.js";
 import type * as systemAdmin_sysAdmin from "../systemAdmin/sysAdmin.js";
-import type * as temp from "../temp.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -44,24 +45,25 @@ import type * as temp from "../temp.js";
  */
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
-  "Businesses/businesses": typeof Businesses_businesses;
-  "Businesses/businessInvitation": typeof Businesses_businessInvitation;
-  "Businesses/helper": typeof Businesses_helper;
-  "Businesses/sendbusinessInvitation": typeof Businesses_sendbusinessInvitation;
-  "emails/Businessinvitation": typeof emails_Businessinvitation;
-  "emails/BusinessUserInvitation": typeof emails_BusinessUserInvitation;
+  "emails/Organisationinvitation": typeof emails_Organisationinvitation;
+  "emails/OrgsUserInvitation": typeof emails_OrgsUserInvitation;
   "emails/VerificationCodeEmail": typeof emails_VerificationCodeEmail;
+  "helper/helper": typeof helper_helper;
   "helper/index": typeof helper_index;
+  "helper/sendMail": typeof helper_sendMail;
   http: typeof http;
+  "Organisation/organisationInvitation": typeof Organisation_organisationInvitation;
+  "Organisation/organisations": typeof Organisation_organisations;
+  "Organisation/OrganisationToUser": typeof Organisation_OrganisationToUser;
+  "Organisation/sendOrganisationInvitation": typeof Organisation_sendOrganisationInvitation;
   "OTP/ResendOTP": typeof OTP_ResendOTP;
   "payment/payment_db": typeof payment_payment_db;
   "payment/paystack": typeof payment_paystack;
   "schemas/auth": typeof schemas_auth;
-  "schemas/business": typeof schemas_business;
+  "schemas/organisation": typeof schemas_organisation;
   "schemas/payments": typeof schemas_payments;
   "schemas/sysAdmin": typeof schemas_sysAdmin;
   "systemAdmin/sysAdmin": typeof systemAdmin_sysAdmin;
-  temp: typeof temp;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

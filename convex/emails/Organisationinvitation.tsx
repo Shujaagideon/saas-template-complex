@@ -7,12 +7,12 @@ import {
   Button,
 } from "@react-email/components";
 
-export function BusinessInvitationEmail({
+export function OrganisationInvitationEmail({
   invitationLink,
-  businessName,
+  organisationName,
 }: {
   invitationLink: string;
-  businessName: string;
+  organisationName: string;
 }) {
   return (
     <Html>
@@ -20,9 +20,9 @@ export function BusinessInvitationEmail({
       <Body style={{ fontFamily: "Arial, sans-serif" }}>
         <Container>
           <Text>
-            You&rsquo;ve been invited to create a business on our platform!
+            You&rsquo;ve been invited to create an organisation on our platform!
           </Text>
-          <Text>Business Name: {businessName}</Text>
+          <Text>Organisation Name: {organisationName}</Text>
           <Button
             href={invitationLink}
             style={{

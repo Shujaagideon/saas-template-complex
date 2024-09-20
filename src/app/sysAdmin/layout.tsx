@@ -18,9 +18,9 @@ const layout = ({ children }: { children: ReactElement }) => {
           className="mt-4"
           links={[
             {
-              title: "New Business",
+              title: "New Organisation",
               label: "",
-              link: "sysAdmin/create-business",
+              link: "sysAdmin/create-organisation",
               icon: <Icons.plus className="mr-2 h-4 w-4" />,
               variant: "ghost",
             },

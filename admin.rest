@@ -2,7 +2,7 @@ POST https://tame-hummingbird-105.convex.site/createInitialSysAdmin
 content-type: application/json
 
 {
-  "email": "gideonshujaa@gmail.com",
+  "email": "mtukufu254@gmail.com",
   "name": "Shujaa",
   "token": "your_very_secret_token_here"
 }

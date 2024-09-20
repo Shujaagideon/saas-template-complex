@@ -1,14 +1,12 @@
-// convex/schema.ts
-
 import { defineSchema } from "convex/server";
 import { auth } from "./schemas/auth";
 import { payments } from "./schemas/payments";
-import { bizz } from "./schemas/business";
+import { organisation } from "./schemas/organisation";
 import { sysAdmin } from "./schemas/sysAdmin";
 
 export default defineSchema({
   ...payments,
   ...auth,
-  ...bizz,
+  ...organisation,
   ...sysAdmin
 });
